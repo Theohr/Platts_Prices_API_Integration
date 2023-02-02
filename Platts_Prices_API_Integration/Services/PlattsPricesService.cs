@@ -56,7 +56,7 @@ namespace Danaos.TRD.App.Services
             {
                 //Loads or open an existing workbook
                 
-                FileStream inputStream = new FileStream("C:\\Users\\theodoros.h\\Desktop\\forDelete\\EB_hist.csv", FileMode.Open);
+                FileStream inputStream = new FileStream("C:\\Users\\user\\Desktop\\forDelete\\EB_hist.csv", FileMode.Open);
                 IWorkbook workbook = excelEngine.Excel.Workbooks.Open(inputStream);
                 IWorksheet worksheet = workbook.Worksheets[0];
 
@@ -333,11 +333,11 @@ namespace Danaos.TRD.App.Services
                 };
 
                 request.AddHeader("accept", "application/json");
-                request.AddHeader("appkey", "nKTBgkEVCrieylmxTVmo");
+                request.AddHeader("appkey", "plattsAPIKey");
                 //request.AddHeader("appkey", "BPKXYyGxYYszGMoLNAXW");
                 request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
-                request.AddParameter("username", "theodoros.h@island-oil.com");
-                request.AddParameter("password", "TH23hr1998*");
+                request.AddParameter("username", "user email");
+                request.AddParameter("password", "user password");
 
                 //RestResponse response = client.Post(request);
                 RestResponse response = client.Execute(request);
